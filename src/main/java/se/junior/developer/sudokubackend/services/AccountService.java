@@ -2,6 +2,8 @@ package se.junior.developer.sudokubackend.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import se.junior.developer.sudokubackend.dtos.AccountDto;
+import se.junior.developer.sudokubackend.mappers.AccountMapper;
 import se.junior.developer.sudokubackend.models.Account;
 import se.junior.developer.sudokubackend.repositories.AccountRepo;
 
@@ -15,7 +17,7 @@ public class AccountService {
         this.accountRepo = accountRepo;
     }
 
-    public Account createAccount(Account account) {
-        return accountRepo.save(account);
+    public Account createAccount(AccountDto account) {
+        return accountRepo.save(AccountMapper.INSTANCE.dtoToAccount(account));
     }
 }

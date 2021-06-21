@@ -1,9 +1,8 @@
 package se.junior.developer.sudokubackend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import se.junior.developer.sudokubackend.dtos.AccountDto;
 import se.junior.developer.sudokubackend.models.Account;
 import se.junior.developer.sudokubackend.services.AccountService;
 
@@ -19,7 +18,7 @@ public class AccountController {
     }
 
     @PostMapping
-    public Account createAccount(Account account){
+    public Account createAccount(@RequestBody AccountDto account){
         return accountService.createAccount(account);
     }
 }
