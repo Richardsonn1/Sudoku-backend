@@ -6,6 +6,13 @@ import org.mapstruct.factory.Mappers;
 import se.junior.developer.sudokubackend.dtos.AccountDto;
 import se.junior.developer.sudokubackend.models.Account;
 
+/**
+ * Mapper with MapStruct
+ * https://mapstruct.org/documentation/reference-guide/
+ *
+ * Maps the dto:information to entities
+ */
+
 @Mapper
 public interface AccountMapper {
 

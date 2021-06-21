@@ -17,6 +17,10 @@ public class AccountService {
         this.accountRepo = accountRepo;
     }
 
+    /**
+     * createAccount method adds and saves a new account to the database.
+     * @param account contains username & password to the created account.
+     */
     public Account createAccount(AccountDto account) {
         return accountRepo.save(AccountMapper.INSTANCE.dtoToAccount(account));
     }
