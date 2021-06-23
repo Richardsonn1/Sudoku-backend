@@ -6,6 +6,8 @@ import se.junior.developer.sudokubackend.dtos.AccountDto;
 import se.junior.developer.sudokubackend.models.Account;
 import se.junior.developer.sudokubackend.services.AccountService;
 
+import java.util.List;
+
 @RestController()
 @RequestMapping("/api/account")
 public class AccountController {
@@ -20,5 +22,10 @@ public class AccountController {
     @PostMapping
     public Account createAccount(@RequestBody AccountDto account){
         return accountService.createAccount(account);
+    }
+
+    @GetMapping
+    public List<Account> getAccounts(){
+        return accountService.getAccounts();
     }
 }

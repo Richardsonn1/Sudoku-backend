@@ -7,6 +7,8 @@ import se.junior.developer.sudokubackend.mappers.AccountMapper;
 import se.junior.developer.sudokubackend.models.Account;
 import se.junior.developer.sudokubackend.repositories.AccountRepo;
 
+import java.util.List;
+
 @Service
 public class AccountService {
 
@@ -23,5 +25,9 @@ public class AccountService {
      */
     public Account createAccount(AccountDto account) {
         return accountRepo.save(AccountMapper.INSTANCE.dtoToAccount(account));
+    }
+
+    public List<Account> getAccounts() {
+        return accountRepo.findAll();
     }
 }
