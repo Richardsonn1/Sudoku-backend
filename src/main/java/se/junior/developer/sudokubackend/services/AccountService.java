@@ -27,6 +27,9 @@ public class AccountService {
         return accountRepo.save(AccountMapper.INSTANCE.dtoToAccount(account));
     }
 
+    /**
+     * @return a list of all accounts in the database.
+     */
     public List<Account> getAccounts() {
         return accountRepo.findAll();
     }
