@@ -20,7 +20,7 @@ public class GameController {
     }
 
     @PostMapping
-    public Game addGame(GameDto gameDto){
-        return gameService.addGame(gameDto);
+    public Game createGame(GameDto gameDto){
+        return gameService.createGame(gameDto);
     }
 }

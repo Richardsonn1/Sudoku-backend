@@ -17,7 +17,7 @@ public class GameService {
         this.gameRepo = gameRepo;
     }
 
-    public Game addGame(GameDto gameDto) {
+    public Game createGame(GameDto gameDto) {
         return gameRepo.save(GameMapper.INSTANCE.dtoToGame(gameDto));
     }
 }
