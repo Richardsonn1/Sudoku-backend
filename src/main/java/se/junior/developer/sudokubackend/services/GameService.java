@@ -20,4 +20,8 @@ public class GameService {
     public Game createGame(GameDto gameDto) {
         return gameRepo.save(GameMapper.INSTANCE.dtoToGame(gameDto));
     }
+
+    public Game getGameById(Long id) {
+        return gameRepo.getGameById(id);
+    }
 }

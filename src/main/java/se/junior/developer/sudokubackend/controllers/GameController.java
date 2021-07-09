@@ -1,6 +1,8 @@
 package se.junior.developer.sudokubackend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,5 +24,10 @@ public class GameController {
     @PostMapping
     public Game createGame(GameDto gameDto){
         return gameService.createGame(gameDto);
+    }
+
+    @GetMapping()
+    public Game getGameById(@Param("id") Long id){
+        return gameService.getGameById(id);
     }
 }
