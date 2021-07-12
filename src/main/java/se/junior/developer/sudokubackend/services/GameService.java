@@ -17,6 +17,10 @@ public class GameService {
         this.gameRepo = gameRepo;
     }
 
+    /**
+     * createGame method adds and saves a new game to the database.
+     * @param gameDto contains gameId, accountId, map & finishTime.
+     */
     public Game createGame(GameDto gameDto) {
         return gameRepo.save(GameMapper.INSTANCE.dtoToGame(gameDto));
     }

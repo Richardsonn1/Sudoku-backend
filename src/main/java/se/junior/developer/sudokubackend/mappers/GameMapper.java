@@ -6,6 +6,13 @@ import org.mapstruct.factory.Mappers;
 import se.junior.developer.sudokubackend.dtos.GameDto;
 import se.junior.developer.sudokubackend.models.Game;
 
+/**
+ * Mapper with MapStruct
+ * https://mapstruct.org/documentation/reference-guide/
+ *
+ * Maps the dto:information to entities
+ */
+
 @Mapper
 public interface GameMapper {
 
